@@ -1,8 +1,8 @@
 {
-  "name": "portfolio-website-gatsby",
+  "name": "portfolio",
   "description": "Portfolio website built in Gatsby",
   "version": "1.0.0",
-  "author": "Milos Lekovic <milos085@gmail.com>",
+  "author": "Nitesh Dubey",
   "dependencies": {
     "babel-plugin-styled-components": "^1.8.0",
     "gatsby": "^2.0.40",
