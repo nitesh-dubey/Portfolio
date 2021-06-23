@@ -1,86 +1,85 @@
 module.exports = {
-  pathPrefix : `/myportfolio`,
+  pathPrefix: `/myportfolio`,
   siteMetadata: {
     title: "Nitesh's Portfolio",
-    links : {
-      legato : {
-        url : `https://www.legatohealth.com/`
+    links: {
+      legato: {
+        url: `https://www.legatohealth.com/`
       },
-      projects : {
-        intown : {
-          github : `https://github.com/nitesh-dubey/Intown`,
+      projects: {
+        intown: {
+          github: `https://github.com/nitesh-dubey/Intown`
         },
-        vient : {
-          github : `https://github.com/nitesh-dubey/Vient`,
+        vient: {
+          github: `https://github.com/nitesh-dubey/Vient`
         },
-        propertyManagement : {
-          github : `https://github.com/nitesh-dubey/Property-Management`,
+        propertyManagement: {
+          github: `https://github.com/nitesh-dubey/Property-Management`
         },
-        mazeGame : {
-          github : `https://github.com/nitesh-dubey/Maze-Game`,
-          demo : `https://nitesh-dubey.github.io/Maze-Game`,
+        mazeGame: {
+          github: `https://github.com/nitesh-dubey/Maze-Game`,
+          demo: `https://nitesh-dubey.github.io/Maze-Game`
         },
-        imageCaptioning : {
-          github : `https://github.com/nitesh-dubey/Neural-Image-Captioning`,
+        imageCaptioning: {
+          github: `https://github.com/nitesh-dubey/Neural-Image-Captioning`
         },
-        textSummarization : {
-          github : `https://github.com/nitesh-dubey/Abstractive-Text-Summarization`,
+        textSummarization: {
+          github: `https://github.com/nitesh-dubey/Abstractive-Text-Summarization`
         },
-        fitnessbook : {
-          github : `https://github.com/nitesh-dubey/FitnessBook2`,
+        fitnessbook: {
+          github: `https://github.com/nitesh-dubey/FitnessBook2`
         }
-
       },
-      personal : {
-        gmail : 'mailto:niteshdubey100@gmail.com',
-        github : 'https://github.com/nitesh-dubey',
-        linkedin : 'https://www.linkedin.com/in/niteshdubey300/'
-      },
+      personal: {
+        gmail: 'mailto:niteshdubey100@gmail.com',
+        github: 'https://github.com/nitesh-dubey',
+        linkedin: 'https://www.linkedin.com/in/niteshdubey300/'
+      }
     },
-    skills : [
+    skills: [
       {
-        title : 'Frontend',
-        technologies : [
-          {name : "React Js", filename : "react"},
-          {name : "Material UI", filename : "mui"},
-          {name : "React Native", filename : "rn"},
-          {name : "React Native Elements", filename : "rn-elements"},
-          {name : "HTML", filename : "html"},
-          {name : "CSS", filename : "css"},
-          {name : "Javascript", filename : "js"},
-          {name : "Gatsby", filename : "gatsby"},
+        title: 'Frontend',
+        technologies: [
+          { name: 'React Js', filename: 'react' },
+          { name: 'Material UI', filename: 'mui' },
+          { name: 'React Native', filename: 'rn' },
+          { name: 'React Native Elements', filename: 'rn-elements' },
+          { name: 'HTML', filename: 'html' },
+          { name: 'CSS', filename: 'css' },
+          { name: 'Javascript', filename: 'js' },
+          { name: 'Gatsby', filename: 'gatsby' }
         ]
       },
       {
-        title : "Backend",
-        technologies : [
-          {name : "Node.js", filename : "nodejs"},
-          {name : "Express.js", filename : "express"},
-          {name : "MongoDB", filename : "mongodb"},
-          {name : "MySQL", filename : "mysql"},
-          {name : "GraphQL", filename : "graphql"},
-          {name : "Firebase", filename : "firebase"}
+        title: 'Backend',
+        technologies: [
+          { name: 'Node.js', filename: 'nodejs' },
+          { name: 'Express.js', filename: 'express' },
+          { name: 'MongoDB', filename: 'mongodb' },
+          { name: 'MySQL', filename: 'mysql' },
+          { name: 'GraphQL', filename: 'graphql' },
+          { name: 'Amazon Web Services', filename: 'aws' },
+          { name: 'Firebase', filename: 'firebase' }
         ]
       },
       {
-        title : "Machine Learning",
-        technologies : [
-          {name : "Keras", filename : "keras"},
-          {name : "Python", filename : "python"},
-          {name : "Scikit Learn", filename : "scikit"},
+        title: 'Machine Learning',
+        technologies: [
+          { name: 'Keras', filename: 'keras' },
+          { name: 'Python', filename: 'python' },
+          { name: 'Scikit Learn', filename: 'scikit' }
         ]
       },
       {
-        title : "Others",
-        technologies : [
-          {name : "CPP", filename : "cpp"},
-          {name : "Android Studio", filename : "androidstudio"},
-          {name : "Expo", filename : "expo"},
-          {name : "Git", filename : "git"},
+        title: 'Others',
+        technologies: [
+          { name: 'CPP', filename: 'cpp' },
+          { name: 'Android Studio', filename: 'androidstudio' },
+          { name: 'Expo', filename: 'expo' },
+          { name: 'Git', filename: 'git' }
         ]
       }
     ]
-
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -107,11 +106,11 @@ module.exports = {
       }
     },
     {
-      resolve : 'gatsby-plugin-react-svg',
-      options : {
-        rule : {
-          include : {
-            include : /skills\/.*\.svg/
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: {
+            include: /skills\/.*\.svg/
           }
         }
       }
