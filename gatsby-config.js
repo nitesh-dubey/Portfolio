@@ -7,6 +7,10 @@ module.exports = {
         url: `https://www.legatohealth.com/`
       },
       projects: {
+        splash: {
+          github: 'https://github.com/nitesh-dubey/Splash-Image-Search',
+          website: 'https://splash.vercel.app/'
+        },
         intown: {
           github: `https://github.com/nitesh-dubey/Intown`
         },

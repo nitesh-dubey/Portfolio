@@ -21,6 +21,7 @@ import MazeGame from '../images/mazeGame.jpg';
 import ImageCaptioning from '../images/imageCaptioning.jpg';
 import TextSummarization from '../images/textSummarization.jpg';
 import FitnessBook from '../images/fitnessbook.jpg';
+import Splash from '../images/splash.png';
 
 const AboveFold = styled.div`
   ${Mixins.aboveFoldMixin}
@@ -287,6 +288,49 @@ class Homepage extends React.Component {
               Projects
             </t.H2>
           </Content>
+
+          <Block>
+            <BlockContent>
+              <DivWrapper>
+                <t.H2 bold>Splash - Image Search (Ongoing)</t.H2>
+                <t.LargeP>
+                  Splash is a fully responsive Image Search Website, where users can search for images by entering
+                  related tags in the search bar. They can log into the website and can also upload their own images to
+                  the website, which will automatically be tagged.
+                </t.LargeP>
+                <t.LargeP>
+                  <strong>Tech stack used :</strong>{' '}
+                  <span color="gray">Nextjs, Nodejs, Chakra-ui, Postgres, Redis, Elasticsearch.</span>
+                </t.LargeP>
+                <LinkButton
+                  primary
+                  bold
+                  className="link"
+                  as="a"
+                  target="_blank"
+                  style={{ paddingRight: 8 }}
+                  href={links.projects.splash.github}
+                >
+                  Code
+                </LinkButton>
+                <LinkButton
+                  primary
+                  bold
+                  className="link"
+                  as="a"
+                  target="_blank"
+                  style={{ paddingLeft: 8 }}
+                  href={links.projects.splash.website}
+                >
+                  Website
+                </LinkButton>
+              </DivWrapper>
+              <DivWrapper>
+                <ItemImage src={Splash} type="mobile" alt="Vient" />
+              </DivWrapper>
+            </BlockContent>
+          </Block>
+
           <Block>
             <BlockContent>
               <DivWrapper>
@@ -312,6 +356,7 @@ class Homepage extends React.Component {
               </DivWrapper>
             </BlockContent>
           </Block>
+
           <Block>
             <BlockContent>
               <DivWrapper>
@@ -334,6 +379,7 @@ class Homepage extends React.Component {
               </DivWrapper>
             </BlockContent>
           </Block>
+
           <Block>
             <BlockContent>
               <DivWrapper>
@@ -550,6 +596,10 @@ export const pageQuery = graphql`
             url
           }
           projects {
+            splash {
+              github
+              website
+            }
             intown {
               github
             }
