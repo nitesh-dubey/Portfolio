@@ -9,7 +9,8 @@ module.exports = {
       projects: {
         splash: {
           github: 'https://github.com/nitesh-dubey/Splash-Image-Search',
-          website: 'https://splash.vercel.app/'
+          website: 'https://splash.vercel.app/',
+          ml_model: 'https://github.com/nitesh-dubey/deep-tagging'
         },
         intown: {
           github: `https://github.com/nitesh-dubey/Intown`

@@ -11,7 +11,7 @@ import Colors from '../Colors';
 import Img from 'gatsby-image';
 import { graphql } from 'gatsby';
 import { darken, padding } from 'polished';
-import Resume from '../pdf/Nitesh_Resume_Fullstack.pdf';
+import Resume from '../pdf/Nitesh_Resume.pdf';
 import SkillGrid from '../components/SkillGrid';
 
 import Intown from '../images/intown.jpg';
@@ -172,13 +172,11 @@ class Homepage extends React.Component {
               Nitesh Dubey
             </t.H1>
             <t.LargeP align="center" max45>
-              <b>Hi, I'm Nitesh</b>, welcome to my website. I'm an avid learner and have worked with Fullstack
-              Development, Mobile Development and Machine Learning. Currently, I'm pursuing Bachelor's in Computer
-              Science From{' '}
-              <i>
-                <strong>Indian Institute of Information Technology Guwahati</strong>
-              </i>
-              .
+              <b>Hi, I'm Nitesh</b>, welcome to my website. I'm working as a <strong>Member of Technical Staff</strong>{' '}
+              at <strong>DevRev Inc. </strong>
+              I'm an avid learner and have worked with Fullstack Development, Mobile Development and Machine Learning.
+              I'm a <strong>2022</strong> Computer Science grad From{' '}
+              <strong>Indian Institute of Information Technology Guwahati</strong>.
             </t.LargeP>
             {/* <HireMe large onClick={this.openContactPopup} book>
               <a href={Resume} download>Download Resume</a>
@@ -193,6 +191,46 @@ class Homepage extends React.Component {
             <t.H2 primary align="center" bold>
               Experience
             </t.H2>
+
+            {/* First Job */}
+
+            <div>
+              <t.LargeP bold style={{ color: Colors.darkest, marginBottom: 0, fontSize: '1.5em' }}>
+                Member of Technical Staff
+              </t.LargeP>
+
+              <t.P style={{ color: Colors.lightWhite }}>
+                <LinkButton
+                  primary
+                  className="link"
+                  as="a"
+                  target="_blank"
+                  href={links.legato.url}
+                  space
+                  rel="noreferrer"
+                >
+                  <strong style={{ fontSize: '1.3em' }}>DevRev Inc.</strong>
+                </LinkButton>
+                - <em style={{ color: 'grey' }}>Dec'21 to present</em>
+              </t.P>
+
+              <t.P style={{ color: Colors.lightWhite, fontSize: '1.2em' }}>
+                <ul>
+                  <li>Developed UI of Issue and Ticket Management Quadrant of DevRev, in a team of 8 people.</li>
+                  <li>Fix and improve End to End test and unit test coverage in DevRev web app</li>
+                  <li>
+                    Implemented Product Analytics inside DevRev, with Segment and Heap Analytics to facilitate product
+                    decisions, and usage analysis
+                  </li>
+                  <li>
+                    Collaborated with UX and Backend team, in the development of various new feature and bug fixes in
+                    the webapp
+                  </li>
+                </ul>
+              </t.P>
+            </div>
+
+            <EmptySpace />
 
             {/* Second Interns */}
             <div>
@@ -212,7 +250,7 @@ class Homepage extends React.Component {
                 >
                   <strong style={{ fontSize: '1.3em' }}>Legato Health Technologies ( Anthem Inc. )</strong>
                 </LinkButton>
-                - <em style={{ color: 'grey' }}>May'21 to present</em>
+                - <em style={{ color: 'grey' }}>May'21 to July'21</em>
               </t.P>
 
               <t.P style={{ color: Colors.lightWhite, fontSize: '1.2em' }}>
@@ -292,15 +330,20 @@ class Homepage extends React.Component {
           <Block>
             <BlockContent>
               <DivWrapper>
-                <t.H2 bold>Splash - Image Search (Ongoing)</t.H2>
+                <t.H2 bold>Splash - Image Search</t.H2>
                 <t.LargeP>
                   Splash is a fully responsive Image Search Website, where users can search for images by entering
                   related tags in the search bar. They can log into the website and can also upload their own images to
-                  the website, which will automatically be tagged.
+                  the website, which will automatically be tagged. The Image Autotagging will be handled by my ML model.
+                  <EmptySpace emptyspace="1rem" />
+                  If the user uploads images to the website, it will run this model on the image. The model will predict
+                  and rank both seen and unseen tags (not limited to training set) on the image. It’ll keep increasing
+                  its tags vocabulary with the user suggested tags. I built this model by implementing Fast Zero shot
+                  Image Tagging research paper.
                 </t.LargeP>
                 <t.LargeP>
                   <strong>Tech stack used :</strong>{' '}
-                  <span color="gray">Nextjs, Nodejs, Chakra-ui, Postgres, Redis, Elasticsearch.</span>
+                  <span color="gray">Nextjs, Nodejs, Chakra-ui, MongoDB, Keras, Tensorflow, Python</span>
                 </t.LargeP>
                 <LinkButton
                   primary
@@ -323,6 +366,17 @@ class Homepage extends React.Component {
                   href={links.projects.splash.website}
                 >
                   Website
+                </LinkButton>
+                <LinkButton
+                  primary
+                  bold
+                  className="link"
+                  as="a"
+                  target="_blank"
+                  style={{ paddingLeft: 8 }}
+                  href={links.projects.splash.ml_model}
+                >
+                  Machine Learning Model
                 </LinkButton>
               </DivWrapper>
               <DivWrapper>
@@ -599,6 +653,7 @@ export const pageQuery = graphql`
             splash {
               github
               website
+              ml_model
             }
             intown {
               github
